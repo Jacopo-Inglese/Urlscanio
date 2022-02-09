@@ -1,0 +1,16 @@
+opencti:
+  url: 'http://localhost:8080'
+  token: 'ChangeMe'
+
+connector:
+  id: 'ChangeMe'
+  type: 'INTERNAL_ENRICHMENT'
+  name: 'UrlScanIo'
+  scope: 'Url,IPv4-Addr,IPv6-Addr,X-OpenCTI-Hostname,Domain-Name' # MIME type or SCO
+  connector_auto: true
+  confidence_level: 100 # From 0 (Unknown) to 100 (Fully trusted)
+  log_level: 'info'
+
+urlscanio:
+  api_key: 'ChangeMe'
+  max_tlp: 'TLP:AMBER'

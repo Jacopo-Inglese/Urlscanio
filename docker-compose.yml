@@ -1,0 +1,17 @@
+version: '3'
+services:
+  connector-urlscanio:
+    image: opencti/connector-urlscanio:rolling
+    environment:
+      - OPENCTI_URL=http://opencti:8080
+      - OPENCTI_TOKEN='ChangeMe'
+      - CONNECTOR_ID='ChangeMe'
+      - CONNECTOR_TYPE=INTERNAL_ENRICHMENT
+      - CONNECTOR_NAME=UrlScanIo
+      - CONNECTOR_SCOPE=Url,IPv4-Addr,IPv6-Addr,X-OpenCTI-Hostname,Domain-Name
+      - CONNECTOR_CONFIDENCE_LEVEL=100
+      - CONNECTOR_LOG_LEVEL=info
+      - URLSCANIO_API_KEY='ChangeMe'
+      - URLSCANIO_MAX_TLP=TLP:AMBER
+      - CONNECTOR_AUTO=true
+    restart: always
